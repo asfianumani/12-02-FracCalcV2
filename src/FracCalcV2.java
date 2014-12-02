@@ -1,4 +1,16 @@
 // Complete the main class FracCalcV2 to create two instances of RationalNumber and use the methods
+public class FracCalcV2
+{
+  public static void main(String[]args)
+  {
+    RationalNumber frac1=new RationalNumber(3,6);
+    RationalNumber frac2=new RationalNumber(2,8);
+    System.out.println("frac1:"+frac1.toString());
+    System.out.println("frac2:"+frac2.toString());
+    
+    System.out.println("frac1+frac2="+frac2.add(frac1));
+    
+    
 
 // in your main method...
 //   create two instances of RationalNumber frac1 and frac2 with values 3/6 and 2/8
