@@ -47,31 +47,34 @@ public class RationalNumber
   }
   public void add(RationalNumber frac)
   {
-    denom=denom*frac.getDenominator();
-    num=(num*frac.getDenominator())+(frac.getNumerator()*denom);
-    denom=denom/GreatestCommonDivisor(num,denom);
-    num=num/GreatestCommonDivisor(num,denom);
+    int d2=frac.getDenominator();
+    int n2=frac.getNumerator();
+    num=(num*d2)+(n2*denom);
+    denom=denom*d2;
+    //denom=denom/GreatestCommonDivisor(num,denom);
+    //num=num/GreatestCommonDivisor(num,denom);
   }
   public void subtract(RationalNumber frac)
   {
-    denom=denom*frac.getDenominator();
-    num=(num*frac.getDenominator())-(frac.getNumerator()*denom);
-    denom=denom/GreatestCommonDivisor(num,denom);
-    num=num/GreatestCommonDivisor(num,denom);
+    int n2=frac.getNumerator();
+    int d2=frac.getDenominator();
+    num=(num*d2)-(n2*denom);
+    denom=denom*d2;
+    
   }
   public void multiply(RationalNumber frac)
   {
-    denom=denom*frac.getDenominator();
-    num=num*frac.getNumerator();
-    denom=denom/GreatestCommonDivisor(num,denom);
-    num=num/GreatestCommonDivisor(num,denom);
+    int n2=frac.getNumerator();
+    int d2=frac.getDenominator();
+    denom=denom*d2;
+    num=num*n2;
   }
   public void divide(RationalNumber frac)
   {
-    num=num*frac.getDenominator();
-    denom=denom*frac.getNumerator();
-    denom=denom/GreatestCommonDivisor(num,denom);
-    num=num/GreatestCommonDivisor(num,denom);
+    int n2=frac.getNumerator();
+    int d2=frac.getDenominator();
+    num=num*d2;
+    denom=denom*n2;
   }
 }
       
